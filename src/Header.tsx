@@ -2,15 +2,18 @@ import styled from "styled-components";
 import ThemeToggler from "./ThemeToggler";
 import Title from "./Title";
 
-const Wrapper = styled.div`
+const Wrapper = styled.header`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 
-  padding: 20px 16px;
+  padding: 22px 16px;
+
+  position: relative; // to make the box-shadow work
 
   background-color: #fff;
+  box-shadow: 10px 0 10px rgba(0, 0, 0, 0.1);
 `;
 
 export default function Header() {
