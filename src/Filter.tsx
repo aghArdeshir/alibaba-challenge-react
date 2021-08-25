@@ -1,0 +1,8 @@
+export default function Filter() {
+  return (
+    <select>
+      <option>1</option>
+      <option>2</option>
+    </select>
+  );
+}
