@@ -5,4 +5,5 @@ export type T_Country = {
   population: number;
   region: T_Region;
   capital: string;
+  flag: string;
 };

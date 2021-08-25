@@ -15,33 +15,41 @@ const Wrapper = styled.div`
   background-color: #fafafa;
 `;
 
+const CountriesWrapper = styled.div`
+  padding: 40px;
+`;
+
+const toJson = (response: Response) => response.json();
+const toRequiredFields: (countries: T_Country[]) => T_Country[] = (
+  countries: T_Country[]
+) =>
+  countries.map(({ name, capital, population, region, flag }) => ({
+    name,
+    region,
+    population,
+    capital,
+    flag,
+  }));
+
 export default function Countries() {
   const [countries, setCountries] = useState<T_Country[]>([]);
 
   useEffect(() => {
-    setCountries([
-      {
-        name: "Germany",
-        population: 81770900,
-        region: "Europe",
-        capital: "Berlin",
-      },
-      {
-        name: "United States of America",
-        population: 323947000,
-        region: "America",
-        capital: "Washington, D.C.",
-      },
-    ]);
+    fetch("https://restcountries.eu/rest/v2/all")
+      .then(toJson)
+      .then(toRequiredFields)
+      .then(setCountries);
   }, []);
 
   return (
     <Wrapper>
       <Search />
       <Filter />
-      {countries.map((country) => (
-        <Country key={country.name} country={country} />
-      ))}
+      <CountriesWrapper>
+        {countries.map((country) => (
+          <Country key={country.name} country={country} />
+        ))}
+      </CountriesWrapper>
     </Wrapper>
   );
 }
