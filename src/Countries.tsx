@@ -20,24 +20,15 @@ const CountriesWrapper = styled.div`
 `;
 
 const toJson = (response: Response) => response.json();
-const toRequiredFields: (countries: T_Country[]) => T_Country[] = (
-  countries: T_Country[]
-) =>
-  countries.map(({ name, capital, population, region, flag }) => ({
-    name,
-    region,
-    population,
-    capital,
-    flag,
-  }));
 
 export default function Countries() {
   const [countries, setCountries] = useState<T_Country[]>([]);
 
   useEffect(() => {
-    fetch("https://restcountries.eu/rest/v2/all")
+    fetch(
+      "https://restcountries.eu/rest/v2/all?fields=name;region;population;capital;flag"
+    )
       .then(toJson)
-      .then(toRequiredFields)
       .then(setCountries);
   }, []);
 
