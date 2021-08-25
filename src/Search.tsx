@@ -19,6 +19,8 @@ const Input = styled.input`
   &:focus-visible {
     outline: none;
   }
+
+  border-radius: 4px;
 `;
 
 const Div = styled.div`

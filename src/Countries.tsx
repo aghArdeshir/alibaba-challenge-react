@@ -29,7 +29,7 @@ export default function Countries() {
       {
         name: "United States of America",
         population: 323947000,
-        region: "Americas",
+        region: "America",
         capital: "Washington, D.C.",
       },
     ]);
@@ -40,7 +40,7 @@ export default function Countries() {
       <Search />
       <Filter />
       {countries.map((country) => (
-        <Country country={country} />
+        <Country key={country.name} country={country} />
       ))}
     </Wrapper>
   );
