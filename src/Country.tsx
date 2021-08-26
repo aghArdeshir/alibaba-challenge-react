@@ -13,6 +13,9 @@ const Wrapper = styled.div`
   margin-bottom: 40px;
 
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
+
+  color: var(--country-color);
+  background-color: var(--country-background-color);
 `;
 
 const Flag = styled.img`

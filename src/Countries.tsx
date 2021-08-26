@@ -14,7 +14,7 @@ const Wrapper = styled.div`
 
   padding: 25px 20px;
 
-  background-color: #fafafa;
+  background-color: var(--body-background-color);
 `;
 
 const CountriesWrapper = styled.div`

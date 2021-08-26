@@ -15,6 +15,9 @@ const Select = styled.select`
   background-color: none;
 
   border-radius: 4px;
+
+  color: var(--filter-color);
+  background-color: var(--filter-background-color);
 `;
 
 type Props = {

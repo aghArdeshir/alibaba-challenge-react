@@ -12,7 +12,9 @@ const Wrapper = styled.header`
 
   position: relative; // to make the box-shadow work
 
-  background-color: #fff;
+  color: var(--header-color);
+  background-color: var(--header-background-color);
+
   box-shadow: 10px 0 10px rgba(0, 0, 0, 0.1);
 `;
 

@@ -13,8 +13,10 @@ const Input = styled.input`
   border: none;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
 
+  background-color: var(--serach-placeholder-color);
+
   &::placeholder {
-    color: #b0b0b0;
+    color: var(--search-placeholder-color);
   }
 
   &:focus-visible {

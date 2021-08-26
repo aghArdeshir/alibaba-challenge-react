@@ -6,6 +6,9 @@ const Wrapper = styled.div`
   align-items: center;
 
   font-size: 12px;
+
+  user-select: none;
+  cursor: pointer;
 `;
 
 const ThemeIcon = styled.span`
@@ -34,6 +37,14 @@ export default function ThemeToggler() {
     };
   }, []);
 
+  useEffect(() => {
+    if (isDarkTheme) {
+      document.body.classList.add("dark-theme");
+    } else {
+      document.body.classList.remove("dark-theme");
+    }
+  }, [isDarkTheme]);
+
   function toggleTheme() {
     setIsDarkTheme((current) => !current);
   }
@@ -42,11 +53,11 @@ export default function ThemeToggler() {
     <Wrapper onClick={toggleTheme}>
       {isDarkTheme ? (
         <>
-          <ThemeIcon>☾</ThemeIcon> Dark Mode
+          <ThemeIcon>☼</ThemeIcon> Light Mode
         </>
       ) : (
         <>
-          <ThemeIcon>☼</ThemeIcon> Light Mode
+          <ThemeIcon>☾</ThemeIcon> Dark Mode
         </>
       )}
     </Wrapper>
