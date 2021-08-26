@@ -41,7 +41,3 @@ body.dark-theme {
   --filter-color: #ffffff;
   --filter-background-color: #2b3743;
 }
-
-* {
-  transition: all 0.2s;
-}
