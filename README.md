@@ -12,3 +12,5 @@
 - [ ❌ ] Unit tests are not done
 - [ ❌ ] Syncinc state with URL is not done
 - [ ✅ ] Deployed using vercel: https://alibaba-challenge-react.vercel.app/
+- [ 🆒 ] Time Spennt: ~4 Hours
+- [ 🆒 ] Everything is `create-reat-app` and `react-scripts`
