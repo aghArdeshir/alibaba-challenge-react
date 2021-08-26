@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { T_Region } from "./types";
 
@@ -17,10 +17,14 @@ const Select = styled.select`
   border-radius: 4px;
 `;
 
-export default function Filter() {
+type Props = {
+  onChange: (region: T_Region | "") => void;
+};
+
+export default function Filter({ onChange }: Props) {
   const [value, setValue] = useState<T_Region | "">("");
 
-  function onChange(value: string) {
+  function handleChange(value: string) {
     if (value === "All") {
       setValue("");
     } else {
@@ -28,11 +32,15 @@ export default function Filter() {
     }
   }
 
+  useEffect(() => {
+    onChange(value);
+  }, [onChange, value]);
+
   return (
     <Select
       placeholder="Filter by Region"
       value={value || ""}
-      onChange={(e) => onChange(e.target.value)}
+      onChange={(e) => handleChange(e.target.value)}
     >
       <option hidden>Filter by Region</option>
       <option>All</option>

@@ -6,9 +6,5 @@ export type T_Country = {
   region: T_Region;
   capital: string;
   flag: string;
-};
-
-export type T_CountryWithCode = {
-  name: string;
   alpha3Code: string;
 };

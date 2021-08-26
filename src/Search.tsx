@@ -51,6 +51,7 @@ export default function Search({ onSearch }: Props) {
   return (
     <Wrapper>
       <Input
+        autoFocus
         placeholder="Search for a country..."
         value={value}
         onChange={(e) => setValue(e.target.value)}
