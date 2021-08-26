@@ -41,11 +41,11 @@ export default function Country({ country }: Props) {
       <Flag alt={country.name} src={country.flag} />
       <KeyedInfo>
         <h4>{country.name}</h4>
-        <Key>Population:</Key> <Value>45678</Value>
+        <Key>Population:</Key> <Value>{country.population}</Value>
         <br />
-        <Key>Region:</Key> <Value>oonja</Value>
+        <Key>Region:</Key> <Value>{country.region}</Value>
         <br />
-        <Key>Capital:</Key> <Value>eenja</Value>
+        <Key>Capital:</Key> <Value>{country.capital}</Value>
         <br />
       </KeyedInfo>
     </Wrapper>
