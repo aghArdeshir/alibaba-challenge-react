@@ -7,3 +7,8 @@ export type T_Country = {
   capital: string;
   flag: string;
 };
+
+export type T_CountryWithCode = {
+  name: string;
+  alpha3Code: string;
+};

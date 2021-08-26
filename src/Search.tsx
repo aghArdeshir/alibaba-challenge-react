@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 const Input = styled.input`
@@ -23,7 +24,7 @@ const Input = styled.input`
   border-radius: 4px;
 `;
 
-const Div = styled.div`
+const Wrapper = styled.div`
   width: 100%;
   position: relative;
 
@@ -36,10 +37,24 @@ const Div = styled.div`
   }
 `;
 
-export default function Search() {
+type Props = {
+  onSearch: (searchTerm: string) => void;
+};
+
+export default function Search({ onSearch }: Props) {
+  const [value, setValue] = useState("");
+
+  useEffect(() => {
+    onSearch(value);
+  }, [onSearch, value]);
+
   return (
-    <Div>
-      <Input placeholder="Search for a country..." />
-    </Div>
+    <Wrapper>
+      <Input
+        placeholder="Search for a country..."
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+      />
+    </Wrapper>
   );
 }
