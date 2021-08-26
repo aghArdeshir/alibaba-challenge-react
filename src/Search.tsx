@@ -13,7 +13,9 @@ const Input = styled.input`
   border: none;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
 
-  background-color: var(--serach-placeholder-color);
+  color: var(--search-color);
+  caret-color: var(--search-caret-color);
+  background-color: var(--search-background-color);
 
   &::placeholder {
     color: var(--search-placeholder-color);

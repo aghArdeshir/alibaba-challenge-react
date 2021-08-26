@@ -23,7 +23,6 @@ const Wrapper = styled.div`
 `;
 
 const Flag = styled.img`
-  width: 100%;
   width: 266px;
   height: 200px;
 `;

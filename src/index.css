@@ -19,7 +19,9 @@ body {
   --header-color: #000000;
   --country-color: #000000;
   --country-background-color: #ffffff;
-  --serach-background-color: #ffffff;
+  --search-color: #000000;
+  --search-caret-color: #000000;
+  --search-background-color: #ffffff;
   --search-placeholder-color: #b0b0b0;
   --filter-color: #000000;
   --filter-background-color: #ffffff;
@@ -32,7 +34,9 @@ body.dark-theme {
   --header-color: #ffffff;
   --country-color: #ffffff;
   --country-background-color: #2b3743;
-  --serach-background-color: #2b3743;
+  --search-color: #ffffff;
+  --search-caret-color: #ffffff;
+  --search-background-color: #2b3743;
   --search-placeholder-color: #ffffff;
   --filter-color: #ffffff;
   --filter-background-color: #2b3743;

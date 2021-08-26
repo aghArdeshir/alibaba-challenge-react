@@ -1,4 +1,4 @@
-export type T_Region = "Africa" | "America" | "Asia" | "Europe" | "Ocenia";
+export type T_Region = "Africa" | "Americas" | "Asia" | "Europe" | "Oceania";
 
 export type T_Country = {
   name: string;

@@ -48,10 +48,10 @@ export default function Filter({ onChange }: Props) {
       <option hidden>Filter by Region</option>
       <option>All</option>
       <option>Africa</option>
-      <option>America</option>
+      <option>Americas</option>
       <option>Asia</option>
       <option>Europe</option>
-      <option>Ocenia</option>
+      <option>Oceania</option>
     </Select>
   );
 }
