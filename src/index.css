@@ -13,9 +13,10 @@ code {
 }
 
 body {
+  --body-background: #fafafa;
+
   --header-background-color: #ffffff;
   --header-color: #000000;
-  --body-background-color: #fafafa;
   --country-color: #000000;
   --country-background-color: #ffffff;
   --serach-background-color: #ffffff;
@@ -25,9 +26,10 @@ body {
 }
 
 body.dark-theme {
+  background-color: #202d36;
+
   --header-background-color: #2b3743;
   --header-color: #ffffff;
-  --body-background-color: #202d36;
   --country-color: #ffffff;
   --country-background-color: #2b3743;
   --serach-background-color: #2b3743;

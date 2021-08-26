@@ -10,16 +10,22 @@ const Wrapper = styled.div`
   overflow: hidden; // to make image follow border-radius
   background-color: #fff;
   padding-bottom: 30px;
-  margin-bottom: 40px;
 
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
 
   color: var(--country-color);
   background-color: var(--country-background-color);
+
+  margin: 0 20px;
+  margin-bottom: 40px;
+
+  max-width: 266px;
 `;
 
 const Flag = styled.img`
   width: 100%;
+  width: 266px;
+  height: 200px;
 `;
 
 const KeyedInfo = styled.div`

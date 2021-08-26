@@ -18,7 +18,15 @@ const Wrapper = styled.div`
 `;
 
 const CountriesWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   padding: 40px;
+  justify-content: center;
+
+  @media all and (min-width: 732px) {
+    justify-content: space-around;
+  }
 `;
 
 const fetcher = debounce(fetchCOuntries, 300, { leading: true });
